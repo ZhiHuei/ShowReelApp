@@ -1,0 +1,31 @@
+.clip-container{
+  padding: 10px;
+  margin: 5px;
+  display: grid; 
+  align-items: center;
+  grid-template-columns: auto 70px;
+  grid-template-areas: "sidebar main";
+  grid-template-rows: auto;
+  p {
+    text-align: left;
+    overflow: hidden;
+    span {
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .name {
+      color: #212121;
+      font-weight: 700;
+    }
+    .description {
+      color: #777878;
+      font-weight: 500;
+    }
+  }
+}
+
+.sidebar {
+  height: 100%;
+}
