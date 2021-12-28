@@ -15,4 +15,6 @@ This app is made up of two parts, `reel-backend` and `reel-gui`
 ## To run Jest and Ezyme test
 - Run `npm run test` in `reel-gui` directory.
 
+### Snippet of the Prototype
+<img src="https://user-images.githubusercontent.com/33721011/147577702-29c6fc1e-b6f0-40e2-8eaf-b14d0f279c2a.png" width="700">
 
