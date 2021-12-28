@@ -49,7 +49,7 @@ function App() {
     }
     setSelectedClips(updatedClips);
   }
-  
+
   return (
     <div className="App">
       <div className="App-header">

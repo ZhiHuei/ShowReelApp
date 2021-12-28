@@ -14,14 +14,14 @@ function Stacked(props) {
     const steps = [];
     let duration = 0;
     for (var i = 1; i <= selectedClips.length; i++) {
-      const selectedClip = selectedClips[i -1];
+      const selectedClip = selectedClips[i - 1];
       steps.push(
-        <ProgressBar 
-        striped 
-        label={selectedClip.name}
-        now={i / selectedClips.length * 100} 
-        key={i} 
-        style={{backgroundColor:colors[i-1]}}>
+        <ProgressBar
+          striped
+          label={selectedClip.name}
+          now={i / selectedClips.length * 100}
+          key={i}
+          style={{ backgroundColor: colors[i - 1] }}>
         </ProgressBar>
       );
       duration = Number(duration) + Number(Helper.parseTimecodeToSeconds(selectedClip.endTimecode, selectedClip.standard));
