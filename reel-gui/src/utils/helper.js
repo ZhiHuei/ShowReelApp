@@ -3,19 +3,19 @@ class Helper {
   static parseTimecodeToSeconds(timecode, standard) {
     const arr = timecode.split(':');
 
-    let s = 0;
+    let f = 0;
     switch (standard) {
       case 'PAL':
-        s = Number(arr[3]) * 0.04;
+        f = Number(arr[3]) * 0.04;
         break;
       case 'NTSC':
-        s = Number(arr[3]) * 0.0333;
+        f = Number(arr[3]) * 0.0333;
         break;
       default:
         break;
     }
-    // hour * 3600 + minute * 60 + seconds
-    return Number(arr[0]) * 3600 + Number(arr[1]) * 60 + Number(arr[2]) + s;
+    // hour * 3600 + minute * 60 + seconds + (f * standard)
+    return Number(arr[0]) * 3600 + Number(arr[1]) * 60 + Number(arr[2]) + f;
   }
 
   static convertSecondsToHMS(duration, standard) {
