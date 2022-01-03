@@ -77,19 +77,11 @@ describe("Feature: Show Reel testing", () => {
   });
 
   test("all clips (standard: PAL, definititon: SD) should add up to a predefined duration.", () => {
-    sidebarWrapper.find('.clip-container').first().find('input').simulate('change', { target: { checked: true } });
-    sidebarWrapper.find('.clip-container').at(2).find('input').simulate('change', { target: { checked: true } });
-    sidebarWrapper.find('.clip-container').at(3).find('input').simulate('change', { target: { checked: true } });
-
     stackedWrapper = shallow(<Stacked selectedClips={mockedAllSelectedClipsPAL}></Stacked>)
     expect(stackedWrapper.find('.duration').text()).toBe('Duration: 0:2:11:1');
   });
 
   test("all clips (standard: NTSC, definititon: SD) should add up to a predefined duration.", () => {
-    sidebarWrapper.find('.clip-container').at(1).find('input').simulate('change', { target: { checked: true } });
-    sidebarWrapper.find('.clip-container').at(4).find('input').simulate('change', { target: { checked: true } });
-    sidebarWrapper.find('.clip-container').at(5).find('input').simulate('change', { target: { checked: true } });
-
     stackedWrapper = shallow(<Stacked selectedClips={mockedAllSelectedClipsNTSC}></Stacked>)
     expect(stackedWrapper.find('.duration').text()).toBe('Duration: 0:0:54:8');
   });
