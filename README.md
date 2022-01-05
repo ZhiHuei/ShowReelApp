@@ -18,3 +18,8 @@ This app is made up of two parts, `reel-backend` and `reel-gui`
 ### Snippet of the Prototype
 <img src="https://user-images.githubusercontent.com/33721011/147577702-29c6fc1e-b6f0-40e2-8eaf-b14d0f279c2a.png" width="700">
 
+
+### Server Side Rendering 
+- `npm run build` in the `reel-gui` directory 
+- Copy the `/build` folder into `reel-backend` directory
+- run `npm start` and browse to `localhost:5000`

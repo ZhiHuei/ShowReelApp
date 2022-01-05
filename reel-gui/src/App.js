@@ -55,7 +55,7 @@ function App() {
       <div className="App-header">
         <span className="logo">
           <div className="vl">
-            <span>Show Reel Application</span>
+            <span id="title">Show Reel Application</span>
           </div>
         </span>
       </div>
